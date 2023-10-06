@@ -1,7 +1,7 @@
 export default function Histories() {
   return (
     <section className="py-5">
-      <div className="container px-20 text-center">
+      <div className="container px-0 text-center lg:px-20">
         <h2 className="mb-5 text-3xl font-semibold">
           Money Management Made Easy Make Up
           <span className="text-purple"> 40%</span> Lorem ipsum dolor sit amet
