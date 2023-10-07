@@ -8,6 +8,16 @@
   scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+width: 0.3rem;
+}
+html::-webkit-scrollbar-track {
+background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+background: #844AD3;
+}
+
 
 .btn {
   @apply p-4 font-semibold border rounded-full hover:bg-gradient-to-r from-violet-400 to-indigo-500 hover:text-white 
@@ -30,3 +40,6 @@
   @apply flex items-center justify-center h-screen;
 }
 
+.progress-bar{
+ @apply fixed top-0 left-0 right-0 h-1 bg-purple transform origin-left
+}

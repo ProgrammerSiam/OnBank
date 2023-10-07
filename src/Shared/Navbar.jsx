@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
+import { motion, useScroll, useSpring } from "framer-motion";
+
 export default function Navbar() {
   let Links = [
     { name: "Features", link: "/" },
@@ -11,9 +13,16 @@ export default function Navbar() {
   let [open, setOpen] = useState(false);
   let [login, isLoggedIn] = useState(false);
   const [isActive, setIsActive] = useState(false);
-
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
   return (
     <header className="fixed top-0 left-0 z-10 w-full px-3 py-3 bg-white shadow-sm">
+      <motion.div className="progress-bar" style={{ scaleX }} />
+
       <div className="flex items-center justify-between ">
         <div className="items-center lg:flex gap-x-20 md:flex md:px-5 sm:px-3">
           {/* title */}
